@@ -1,4 +1,6 @@
-
+function loadIndex() {
+  window.open("https://emil88pl.github.io");
+}
 // Load About me ###################
 
 function loadAbout() {
