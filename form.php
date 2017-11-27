@@ -30,11 +30,11 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-  $name = $_POST['name'];
+  $name = $_GET['name'];
 
-  $visitor_email = $_POST['email'];
+  $visitor_email = $_GET['email'];
 
-  $message = $_POST['message'];
+  $message = $_GET['message'];
 
 
 
