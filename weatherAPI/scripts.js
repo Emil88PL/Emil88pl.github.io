@@ -25,7 +25,7 @@ $(document).ready(function() {
           $("#tempC").html(temp+"&ordm;");
           $("#tempFC").html("F/C");
           $("#tempF").html(tempf+"F");
-          $("#wind").html("</br>Wind: "+wind+"mph");
+          $("#wind").html("Wind: "+wind+"mph");
           
         });
       });
