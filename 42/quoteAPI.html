@@ -22,5 +22,14 @@
   <button onclick="x()" class="button" type="button">New</button>
   </div>
 </div>
+  
+  <script type="text/javascript">
+  jQuery.ajaxPrefilter(function(options) {
+if (options.crossDomain && jQuery.support.cors) {
+options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+}
+});
+</script>
+  
   </body>
 </html>
