@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Vertical Slider</title>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="left-slide">
+            <div style="background-color: #FD3355;">
+                <h1>House</h1>
+                <p>Just big mansion</p>
+            </div>
+            <div style="background-color: #776c6e;">
+                <h1>On the Top</h1>
+                <p>Fear of height</p>
+            </div>
+            <div style="background-color: #388545;">
+                <h1>Car</h1>
+                <p>Night drive</p>
+            </div>
+            <div style="background-color: #3542fd;">
+                <h1>Fighting</h1>
+                <p>Against everyone</p>
+            </div>
+        </div>
+        <!-- Element order start from last one (div one have last img)-->
+        <div class="right-slide">
+            <div style="background-image: url('img/four.png');"></div> 
+            <div style="background-image: url('img/three.png');"></div>    
+            <div style="background-image: url('img/two.png');"></div>    
+            <div style="background-image: url('img/one.png');"></div>    
+        </div>
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
