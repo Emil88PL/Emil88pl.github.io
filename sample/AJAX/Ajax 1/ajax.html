@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 1 - Text file</title>
+</head>
+<body>
+    <button id="button">Get Text File</button>
+    <br>
+    <br>
+    <br>
+    <div id="text"></div>
+
+
+
+    <script>
+        // Create event listener
+        document.getElementById('button').addEventListener('click', loadText)
+
+        function loadText() {
+             //console.log('butten clicked')
+
+             // Create XHR Object
+            const xhr = new XMLHttpRequest()
+
+            // Open - type, url/file, async
+            //console.log(xhr)
+            xhr.open('GET', 'sample.txt', true)
+
+            console.log('ReadyState: ', xhr.readyState)
+
+            // Optional - used for loaders ((Adding state 3))
+            xhr.onprogress = function() {
+            console.log('ReadyState: ', xhr.readyState)
+
+            }
+
+            xhr.onload = function() {
+                // Going from 1 to 4
+            console.log('ReadyState: ', xhr.readyState)
+               if(this.status == 200) {
+               // console.log(this.responseText)
+                document.getElementById('text').innerHTML = this.responseText
+                } else if(this.status = 404) {
+                document.getElementById('text').innerHTML = 'Not Found'
+             }
+            }
+
+            // check thta dosent work.... ###########
+            // xhr.onerror = function() {
+            //     console.log('Request Error...')
+            // }
+            // #########################################
+
+            // xhr.onreadystatechange = function() {
+            //     // Going thrue all states 1-4
+            // console.log('ReadyState: ', xhr.readyState)
+            //     if(this.readyState == 4 && this.status == 200) {
+            //       //  console.log(this.responseText)
+            //     }
+
+            //     }
+                // ReadyState Values
+                // 0: request not initialized
+                // 1: server connection established
+                // 2: request recived
+                // 3: processing request
+                // 4: request finished and response is redy
+
+
+            // Send request
+            xhr.send()
+        }
+            // HTTP Statuses
+            // 200: "OK"
+            // 403: "Forbidden"
+            // 404: "Not Found"
+    </script>
+</body>
+</html>
