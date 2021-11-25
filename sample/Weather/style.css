@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+  .wrapper {
+    
+    max-width:200px;
+    margin:auto;
+  }
+  
+  .m-fadeIn{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }
+  
+  .m-fadeOut{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+  }
+  
+  .button {
+    position: relative;
+    background-color: #4caf50;
+    border: none;
+    font-size: 28px;
+    color: #ffffff;
+    padding: 11px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  .button:after {
+    content: "";
+    background: #90ee90;
+   /* display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    */opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  .button:active:after {
+    /*padding: 0;
+    margin: 0;
+   */ opacity: 1;
+    transition: 0s;
+  }
+  
+  .data {
+    padding-top: 20px;
+    border: solid #fff 2px;
+    border-radius: 30px;
+    width: 200px;
+    height: 350px;
+     display:block;
+   
+    
+  }
+  
+  .btn {
+      position: absolute;
+      left: auto;
+      top: 280px;
+  }
+  .one {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  
+  
+  
+  
