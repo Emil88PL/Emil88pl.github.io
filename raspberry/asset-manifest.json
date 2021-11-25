@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sample/raspberry/static/css/main.435d5fe5.chunk.css",
+    "main.js": "/sample/raspberry/static/js/main.08c5d033.chunk.js",
+    "main.js.map": "/sample/raspberry/static/js/main.08c5d033.chunk.js.map",
+    "runtime-main.js": "/sample/raspberry/static/js/runtime-main.c7902ac2.js",
+    "runtime-main.js.map": "/sample/raspberry/static/js/runtime-main.c7902ac2.js.map",
+    "static/js/2.d20fea62.chunk.js": "/sample/raspberry/static/js/2.d20fea62.chunk.js",
+    "static/js/2.d20fea62.chunk.js.map": "/sample/raspberry/static/js/2.d20fea62.chunk.js.map",
+    "static/js/3.e6fdb38e.chunk.js": "/sample/raspberry/static/js/3.e6fdb38e.chunk.js",
+    "static/js/3.e6fdb38e.chunk.js.map": "/sample/raspberry/static/js/3.e6fdb38e.chunk.js.map",
+    "index.html": "/sample/raspberry/index.html",
+    "precache-manifest.a99425eeba92db2d56a78bf9f4ff7155.js": "/sample/raspberry/precache-manifest.a99425eeba92db2d56a78bf9f4ff7155.js",
+    "service-worker.js": "/sample/raspberry/service-worker.js",
+    "static/css/main.435d5fe5.chunk.css.map": "/sample/raspberry/static/css/main.435d5fe5.chunk.css.map",
+    "static/js/2.d20fea62.chunk.js.LICENSE.txt": "/sample/raspberry/static/js/2.d20fea62.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/sample/raspberry/static/media/logo.94eed8e2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c7902ac2.js",
+    "static/js/2.d20fea62.chunk.js",
+    "static/css/main.435d5fe5.chunk.css",
+    "static/js/main.08c5d033.chunk.js"
+  ]
+}
