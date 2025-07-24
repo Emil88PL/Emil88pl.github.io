@@ -17,6 +17,7 @@ function addProject(imageSrc, title, description) {
     projectList.appendChild(projectDiv);
 }
 
+addProject('monkeyT.png', 'Monkey Type', 'Every day!');
 addProject('Calcullo!.png', 'Calcullo!', 'Game with numbers!');
 addProject('deepSeek.png', 'Local AI', 'Run your AI locally with Ollama help.');
 addProject('DidI.png', 'To do!?', 'Not ordinary todo list - sending messages to Telegram');
