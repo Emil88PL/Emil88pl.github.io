@@ -22,6 +22,7 @@ function addProject(imageSrc, title, description, pageLink, githubLink) {
 // TODO - add JAVA black jack
 // TODO - add JAVA REST API TASK
 // TODO - add Calculator NDA
+// TODO - add hyperSkill
 
 addProject('monkeyT.png', 'Monkey Type', 'Every day!', 'https://monkeytype.com/', 'https://monkeytype.com/');
 addProject('Calcullo!.png', 'Calcullo!', 'Game with numbers!', 'https://calcullo.vercel.app/', 'https://github.com/Emil88PL/Calcullo'); // private repo
