@@ -9,7 +9,7 @@ function addProject(imageSrc, title, description) {
             <h3>${title}</h3>
             <p>${description}</p>
             <div class="buttons">
-                <button onclick="alert('View code here!')">View Page</button>
+                <button onclick="alert('View page here!')">View Page</button>
                 <button onclick="alert('View code here!')">View Code</button>
             </div>
         </div>
