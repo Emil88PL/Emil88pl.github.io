@@ -32,6 +32,11 @@ body {
 .racoon-container {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+
+.racoon-container > img {
+    max-width: 20%;
 }
 
 img {
