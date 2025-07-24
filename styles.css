@@ -240,3 +240,45 @@ body::-webkit-scrollbar-thumb:active {
 #projectList {
     scroll-margin-top: 100px; /* Adjust this value as needed */
 }
+
+
+@media (max-width: 720px) {
+    .project {
+        flex-direction: column; /* Stacks image on top of text */
+        align-items: center; /* Centers the image and text block horizontally within the project card */
+    }
+
+    .projects img,
+    .project img {
+        width: 100%; /* Makes the image take the full width of the project card */
+        height: auto; /* Maintains aspect ratio */
+        border-top-right-radius: 12px; /* Adds radius to the top-right corner */
+        border-bottom-left-radius: 0; /* Removes radius from the bottom-left corner */
+        border-bottom-right-radius: 0; /* Ensures bottom-right is also sharp */
+    }
+
+    .text-block {
+        text-align: center; /* Centers the text (h3 and p) */
+    }
+
+    .text-block > button {
+        align-self: center;
+        padding: 10px;
+    }
+
+    .buttons {
+        justify-content: center; /* Centers the buttons horizontally */
+    }
+
+    /* Adjust the initial project's image radii for small screens if it's styled differently */
+    .content > .project img {
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    /* Optional: Adjust button max-width if they look too small when centered */
+    button {
+        max-width: 150px; /* Slightly wider buttons on small screens, adjust as needed */
+    }
+}
