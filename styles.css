@@ -193,3 +193,29 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
     cursor: grabbing;
 }
+
+.arrow-down {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    /* or shorthand */
+    margin: 0 auto;
+}
+
+#arrow-down {
+    /* Existing styles */
+    animation: mymove 1.6s infinite;
+    margin-top: 50px;
+}
+
+@keyframes mymove {
+    0% {
+        transform: translateY(0px); /* Start at the original position */
+    }
+    50% {
+        transform: translateY(10px); /* Move down 10 pixels */
+    }
+    100% {
+        transform: translateY(0px); /* Return to the original position */
+    }
+}
