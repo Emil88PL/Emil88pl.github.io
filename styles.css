@@ -103,8 +103,10 @@ button {
     z-index: 999;
     display: flex;
     justify-content: center;
-    gap: 24px;
-    padding: 14px 0;
+    gap: 10px;
+    padding-bottom: 14px;
+    padding-top: 0;
+    margin-top: 20px;
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.04);
 }
@@ -114,12 +116,12 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    transition: background 0.35s, transform 0.35s;
+    transition: background 0.25s, transform 0.25s;
     padding: 10px;
 }
 
 .sticky-icons-bar .icon {
-    width: 72px;
+    width: 92px;
     transition: transform 0.35s;
 }
 
@@ -134,4 +136,30 @@ button {
 .sticky-icons-bar a:hover .icon,
 .sticky-icons-bar a:focus .icon {
     transform: scale(1.22);
+}
+
+
+/* Base window scrollbar styles */
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(55, 54, 54, 0.79);
+    border-radius: 10px;
+}
+
+/* Hover and active states */
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(55, 54, 54);
+    cursor: grab;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
 }
