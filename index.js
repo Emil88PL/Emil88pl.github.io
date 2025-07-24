@@ -17,6 +17,10 @@ function addProject(imageSrc, title, description) {
     projectList.appendChild(projectDiv);
 }
 
+// TODO - add JAVA black jack
+// TODO - add JAVA REST API TASK
+// TODO - add Calculator NDA
+
 addProject('monkeyT.png', 'Monkey Type', 'Every day!');
 addProject('Calcullo!.png', 'Calcullo!', 'Game with numbers!');
 addProject('deepSeek.png', 'Local AI', 'Run your AI locally with Ollama help.');
