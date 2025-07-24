@@ -121,7 +121,6 @@ button {
 .sticky-icons-bar .icon {
     width: 72px;
     transition: transform 0.35s;
-    /*transform: scale(1.1) translateY(12px);*/
 }
 
 .sticky-icons-bar a:hover,
@@ -129,6 +128,7 @@ button {
     background: rgba(255,255,255,0.22);
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
     backdrop-filter: blur(6px);
+    transform: scale(1.1) translateY(12px);
 }
 
 .sticky-icons-bar a:hover .icon,
