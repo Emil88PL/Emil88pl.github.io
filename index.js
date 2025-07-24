@@ -9,7 +9,7 @@ function addProject(imageSrc, title, description, pageLink, githubLink) {
             <h3>${title}</h3>
             <p>${description}</p>
             <div class="buttons">
-                <button onclick="window.open('${pageLing}', '_blank');">View Page</button>
+                <button onclick="window.open('${pageLink}', '_blank');">View Page</button>
                 <button onclick="window.open('${githubLink}', '_blank');">View Code</button>
             </div>
         </div>
