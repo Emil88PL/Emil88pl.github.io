@@ -4,7 +4,9 @@ function addProject(imageSrc, title, description, pageLink, githubLink) {
     const projectDiv = document.createElement('div');
     projectDiv.className = 'project';
     projectDiv.innerHTML = `
-        <img src="static/media/${imageSrc}" alt="${title}">
+        <a href="${pageLink}" target="_blank" class="project-image-link">
+            <img src="static/media/${imageSrc}" alt="${title}">
+        </a>
         <div class="text-block">
             <h3>${title}</h3>
             <p>${description}</p>

@@ -39,13 +39,6 @@ body {
     max-width: 20%;
 }
 
-img {
-    max-width: 39%;
-    height: auto;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
 .text {
     margin-top: 20px;
     font-size: 1.5em;
@@ -147,6 +140,13 @@ button {
     border-radius: 10px;
 }
 
+.sticky-icons-bar img {
+    max-width: 39%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
 .sticky-icons-bar a {
     display: flex;
     align-items: center;
@@ -213,6 +213,7 @@ body::-webkit-scrollbar-thumb:active {
     animation: mymove 1.6s infinite;
     margin-top: 70px;
     transition: filter 0.2s ease;
+    max-width: 39%;
 }
 
 #arrow-down:hover {
