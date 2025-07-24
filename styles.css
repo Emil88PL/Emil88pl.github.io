@@ -28,6 +28,11 @@ body {
     text-align: center;
 }
 
+.racoon-container {
+    display: flex;
+    justify-content: center;
+}
+
 img {
     max-width: 30%;
     height: auto;
