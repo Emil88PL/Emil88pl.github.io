@@ -104,11 +104,11 @@ button {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-bottom: 14px;
-    padding-top: 0;
+    padding: 0 14px 14px;
     margin-top: 20px;
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    border-radius: 10px;
 }
 
 .sticky-icons-bar a {
