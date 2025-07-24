@@ -40,7 +40,7 @@ body {
 }
 
 img {
-    max-width: 30%;
+    max-width: 39%;
     height: auto;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
@@ -71,9 +71,9 @@ img {
 
 .projects img,
 .project img {
-    width: 250px; /* Set a fixed width for project images */
-    height: 150px; /* Set a fixed height for project images */
-    object-fit: cover; /* Ensures the image covers the area */
+    width: 300px; /* Set a fixed width for project images */
+    height: 200px; /* Set a fixed height for project images */
+    object-fit: fill; /* Ensures the image covers the area */
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     border-top-right-radius: 0;
@@ -103,11 +103,6 @@ img {
     cursor: pointer;
     background: none;
     color: white;
-}
-
-.text-block > button {
-    padding: 0;
-    margin: 0;
 }
 
 .text-block button:hover {
@@ -246,6 +241,8 @@ body::-webkit-scrollbar-thumb:active {
     .project {
         flex-direction: column; /* Stacks image on top of text */
         align-items: center; /* Centers the image and text block horizontally within the project card */
+        width: 95%; /* Make the project card wider (e.g., 95% of the viewport width) */
+        margin: 20px auto; /* Center the project card horizontally */
     }
 
     .projects img,
@@ -281,4 +278,8 @@ body::-webkit-scrollbar-thumb:active {
     button {
         max-width: 150px; /* Slightly wider buttons on small screens, adjust as needed */
     }
+}
+
+.footer {
+    padding: 40px 0;
 }

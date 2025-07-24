@@ -34,3 +34,14 @@ addProject('SearchWikipedia.bb96cca1.png', 'Wikipedia', 'Wikipedia.');
 addProject('codePen.c4d32812.png', 'MyCodePen', 'MyCodePen.');
 addProject('choises.17fc70eb.png', 'Pick one', 'Pick one.');
 addProject('AddItem.c085be10.png', 'Item list', 'Item list.');
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const footerElement = document.getElementById('current-year-footer'); // Get the footer element by its ID
+    if (footerElement) {
+        const currentYear = new Date().getFullYear(); // Get the current year
+        footerElement.textContent = `© ${currentYear} Emil Kotlowski`; // Set the text content
+    }
+});
