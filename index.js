@@ -24,14 +24,14 @@ function addProject(imageSrc, title, description, pageLink, githubLink) {
 // TODO - add Calculator NDA
 // TODO - add hyperSkill
 
-addProject('monkeyT.png', 'Monkey Type', 'Every day!', 'https://monkeytype.com/', 'https://monkeytype.com/');
-addProject('Calcullo!.png', 'Calcullo!', 'Game with numbers!', 'https://calcullo.vercel.app/', 'https://github.com/Emil88PL/Calcullo'); // private repo
+addProject('monkeyT.png', 'Monkey Type', 'Typing at 104 words per minute isn\'t just fast - it’s a sign of fluid thought and precision, which are hallmarks of great programmers.', 'https://monkeytype.com/', 'https://monkeytype.com/');
+addProject('Calcullo!.png', 'Calcullo!', 'An educational Mario-style game built with JavaScript to help my niece learn counting.', 'https://calcullo.vercel.app/', 'https://github.com/Emil88PL/Calcullo'); // private repo
 addProject('deepSeek.png', 'Local AI', 'Run your AI locally with Ollama help.', 'https://local-llm-deep-seek.vercel.app/', 'https://github.com/Emil88PL/Local-LLM-DeepSeek');
-addProject('DidI.png', 'To do!?', 'Not ordinary todo list - sending messages to Telegram', 'https://did-i-take-it.vercel.app/', 'https://github.com/Emil88PL/DidITakeIT');
+addProject('DidI.png', 'To do!?', 'A simple JavaScript-based medication reminder that use localStorage. Supports alerts with telegram push notification.', 'https://did-i-take-it.vercel.app/', 'https://github.com/Emil88PL/DidITakeIT');
 addProject('potfolio.png', 'Second Portfolio!?', 'My old portfolio on ReactJS', 'https://emil88pl.github.io/', 'https://github.com/Emil88PL/Emil88pl.github.io');
-addProject('extensions.png', 'Extensions', 'My extensions', 'https://chrome-ex-ten.vercel.app/', 'https://github.com/Emil88PL/chromeEx');
-addProject('raspberry.76a5451e.png', 'Raspberry Pi', 'Tinkering with Pi as a server.', 'https://github.com/Emil88PL/RaspberryPi', 'https://github.com/Emil88PL/RaspberryPi');
-addProject('bubbles.be50155e.png', 'Bubbles in p5.js!', 'I am prince of darkness!', 'https://emil88pl.github.io/sample/Bubbles/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Bubbles');
+addProject('extensions.png', 'Extensions', 'Helpful AI tools to simplify and explain any text', 'https://chrome-ex-ten.vercel.app/', 'https://github.com/Emil88PL/chromeEx');
+addProject('raspberry.76a5451e.png', 'Raspberry Pi', 'Using a Raspberry Pi as a lightweight server with motion detection is a practical and cost-effective setup for home automation or surveillance.', 'https://github.com/Emil88PL/RaspberryPi', 'https://github.com/Emil88PL/RaspberryPi');
+addProject('bubbles.be50155e.png', 'Bubbles in p5.js!', 'Bubbles? I am prince of darkness!', 'https://emil88pl.github.io/sample/Bubbles/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Bubbles');
 addProject('Quotes.821c390f.png', 'Quotes', 'Get a random Quote, google fonts JQuery, JSON.', 'https://codepen.io/Emil88PL/full/RgardM', 'https://codepen.io/Emil88PL/pen/RgardM');
 addProject('Content.2fd9c200.png', 'Content holder', 'All prepared to fetch data from API in vanilla JavaScript.', 'https://emil88pl.github.io/sample/Content%20Placeholder/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Content%20Placeholder');
 addProject('Tic-tac-toe.9c09e9d8.png', 'REACT.js first app', 'Tic-tac-toe in React — classic!', 'https://emil88pl.github.io/sample/REACT!/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/REACT!');
