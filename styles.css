@@ -144,8 +144,7 @@ button {
 .sticky-icons-bar img {
     max-width: 39%;
     height: auto;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-radius: 12px;
 }
 
 .sticky-icons-bar a {
