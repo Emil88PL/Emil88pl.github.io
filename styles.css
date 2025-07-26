@@ -56,11 +56,15 @@ body {
     gap: 0; /* Remove gap from the main container */
     margin: 20px 0; /* Adjust margin for spacing between projects */
     backdrop-filter: blur(8px);
-    background-color: rgba(30, 60, 114, 0.16);
+    background-color: rgba(30, 60, 114, 0.4);
     border-radius: 12px;
     overflow: hidden; /* Ensures content respects border radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     align-items: stretch; /* Stretch items to fill the container height */
+}
+
+.project p {
+    color: white;
 }
 
 .projects img,

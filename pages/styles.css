@@ -33,6 +33,11 @@ body {
 
 }
 
+.privateContent {
+    max-width: 900px;
+}
+
+
 img {
     max-width: 90%;
     max-height: 90%;
