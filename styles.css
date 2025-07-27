@@ -295,3 +295,8 @@ body::-webkit-scrollbar-thumb:active {
     -ms-user-select: none;
     user-select: none;
 }
+
+.infoText {
+    font-size: 0.8rem;
+    color: #49dfb7;
+}
