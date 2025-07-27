@@ -41,6 +41,21 @@ function disableViewCodeButton(projectId) {
     }
 }
 
+function disableViewPageButton(projectId) {
+    const project = document.getElementById(projectId);
+    if (project) {
+        const viewPageBtn = project.querySelector('.view-page-btn');
+        if (viewPageBtn) {
+            viewPageBtn.disabled = true;
+            viewPageBtn.style.opacity = '0.5';
+            viewPageBtn.style.cursor = 'not-allowed';
+            viewPageBtn.onclick = null; // Remove click handler
+        }
+    }
+}
+
+
+
 // TODO - add JAVA black jack
 
 // TODO - add Calculator NDA
@@ -63,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Disable specific buttons after projects are loaded
             disableViewCodeButton('monkey-type');
+            disableViewPageButton('JavaSpringBoot');
         }
     });
 });
