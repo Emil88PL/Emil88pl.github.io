@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadProjects() {
-    addProject('monkeyT.png', 'Monkey Type', 'Typing at 104 words per minute isn\'t just fast - it\'s a sign of fluid thought and precision, which are hallmarks of great programmers.', 'https://monkeytype.com/', 'https://monkeytype.com/', 'monkey-type');
+    addProject('monkeyT.png', 'Monkey Type', 'Typing at 110 words per minute isn\'t just fast - it\'s a sign of fluid thought and precision, which are hallmarks of great programmers.', 'https://monkeytype.com/', 'https://monkeytype.com/', 'monkey-type');
     addProject('JavaSpringBootAPI.png', 'Java Spring boot API', 'Java 21, Spring Boot v3.5.0 and front-end with JS \<br> (You can click \"View code\" button to check the README file for more info)', 'https://', 'https://github.com/Emil88PL/back-front-task', 'JavaSpringBoot');
     addProject('Calcullo!.png', 'Calcullo!', 'An educational Mario-style game built with JavaScript to help my niece learn counting.', 'https://calcullo.vercel.app/', 'https://emil88pl.github.io/pages/privateRepo.html', 'calcullo');
     addProject('deepSeek.png', 'Local AI', 'Run your AI locally with Ollama help.', 'https://local-llm-deep-seek.vercel.app/', 'https://github.com/Emil88PL/Local-LLM-DeepSeek', 'local-ai');
