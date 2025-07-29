@@ -7,7 +7,7 @@ function addProject(imageSrc, title, description, pageLink, githubLink, projectI
 
     projectDiv.innerHTML = `
         <a href="${pageLink}" target="_blank" class="project-image-link">
-            <img src="static/media/${imageSrc}" alt="${title}">
+            <img src="static/media/${imageSrc}" loading="lazy" alt="${title}">
         </a>
         <div class="text-block">
             <h3>${title}</h3>
