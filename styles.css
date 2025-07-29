@@ -36,7 +36,7 @@ body {
 }
 
 .racoon-container > img {
-    max-width: 20%;
+    /*max-width: 20%;*/
 }
 
 .text {
@@ -298,5 +298,5 @@ body::-webkit-scrollbar-thumb:active {
 
 .infoText {
     font-size: 0.8rem;
-    color: #49dfb7;
+    color: #df4949;
 }
