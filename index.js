@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadProjects() {
+    addProject('Task Buddy.png', 'Task Buddy', 'Meet AI Super Buddy – the ultimate productivity sidekick for the Did I Take It? app. It reads your tasks, fires up your motivation with inspiring messages, and gets you moving. Runs locally with Ollama + LLaMA 3, so your data stays private and your workflow stays smooth.', 'https://chrome-ex-ten.vercel.app/', 'https://chrome-ex-ten.vercel.app/', 'taskBuddy');
     addProject('monkeyT.png', 'Monkey Type', 'Typing at 110 words per minute isn\'t just fast - it\'s a sign of fluid thought and precision, which are hallmarks of great programmers.', 'https://monkeytype.com/', 'https://monkeytype.com/', 'monkey-type');
     addProject('JavaSpringBootAPI.png', 'Java Spring boot API', 'Java 21, Spring Boot v3.5.0 and front-end with JS \<br> (You can click \"View code\" button to check the README file for more info)', 'https://', 'https://github.com/Emil88PL/back-front-task', 'JavaSpringBoot');
     addProject('Calcullo!.png', 'Calcullo!', 'An educational Mario-style game built with JavaScript to help my niece learn counting.', 'https://calcullo.vercel.app/', 'https://emil88pl.github.io/pages/privateRepo.html', 'calcullo');
