@@ -60,6 +60,24 @@ function disableViewPageButton(projectId) {
     }
 }
 
+function downloadScript(projectId) {
+    const project = document.getElementById(projectId);
+
+    if (project) {
+        const viewPageBtn = project.querySelector('.view-page-btn');
+        if (viewPageBtn) {
+            viewPageBtn.textContent = "Download";
+            viewPageBtn.onclick = function () {
+                const link = document.createElement("a");
+                link.href = "/download/Olifant.py";
+                link.download = "Olifant.py";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+        }
+    }
+}
 
 
 // TODO - add JAVA black jack
@@ -85,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Disable specific buttons after projects are loaded
             disableViewCodeButton('monkey-type');
             disableViewPageButton('JavaSpringBoot');
+            downloadScript('Olifant')
         }
     });
 });
@@ -94,11 +113,11 @@ function loadProjects() {
     addProject('DidI.png', 'Did I Take It?', 'A simple JavaScript-based medication reminder that use localStorage. Supports alerts with telegram push notification.', 'https://did-i-take-it.vercel.app/', 'https://github.com/Emil88PL/DidITakeIT', 'todo');
     addProject('Task Buddy.png', 'Task Buddy', 'Meet AI Super Buddy – the ultimate productivity sidekick for the Did I Take It? app. It reads your tasks, fires up your motivation with inspiring messages, and gets you moving. Runs locally with Ollama + LLaMA 3, so your data stays private and your workflow stays smooth. (version 1.0.4 support TTS)', 'https://chrome-ex-ten.vercel.app/', 'https://chrome-ex-ten.vercel.app/', 'taskBuddy');
     addProject('monkeyT.png', 'Monkey Type', 'Typing at 110 words per minute isn\'t just fast - it\'s a sign of fluid thought and precision, which are hallmarks of great programmers.', 'https://monkeytype.com/', 'https://monkeytype.com/', 'monkey-type');
+    addProject('extensions.png', 'Extensions', 'Helpful AI tools to simplify and explain any text, download directly "Olifant TODO Tracker" script, "Task buddy" (Linux/Windows), "AI Extensions"', 'https://chrome-ex-ten.vercel.app/', 'https://github.com/Emil88PL/chromeEx', 'extensions');
     addProject('JavaSpringBootAPI.png', 'Java Spring boot API', 'Java 21, Spring Boot v3.5.0 and front-end with JS \<br> (You can click \"View code\" button to check the README file for more info)', 'https://', 'https://github.com/Emil88PL/back-front-task', 'JavaSpringBoot');
     addProject('Calcullo!.png', 'Calcullo!', 'An educational Mario-style game built with JavaScript to help my niece learn counting.', 'https://calcullo.vercel.app/', 'https://emil88pl.github.io/pages/privateRepo.html', 'calcullo');
     addProject('deepSeek.png', 'Local AI', 'Run your AI locally with Ollama help.', 'https://local-llm-deep-seek.vercel.app/', 'https://github.com/Emil88PL/Local-LLM-DeepSeek', 'local-ai');
     addProject('potfolio.png', 'Second Portfolio!?', 'My old portfolio on ReactJS', 'https://emil88pl.github.io/', 'https://github.com/Emil88PL/Emil88pl.github.io', 'second-portfolio');
-    addProject('extensions.png', 'Extensions', 'Helpful AI tools to simplify and explain any text', 'https://chrome-ex-ten.vercel.app/', 'https://github.com/Emil88PL/chromeEx', 'extensions');
     addProject('raspberry.76a5451e.png', 'Raspberry Pi', 'Using a Raspberry Pi as a lightweight server with motion detection is a practical and cost-effective setup for home automation or surveillance.', 'https://github.com/Emil88PL/RaspberryPi', 'https://github.com/Emil88PL/RaspberryPi', 'raspberry-pi');
     addProject('bubbles.be50155e.png', 'Bubbles in p5.js!', 'Bubbles? I am prince of darkness!', 'https://emil88pl.github.io/sample/Bubbles/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Bubbles', 'bubbles');
     addProject('Quotes.821c390f.png', 'Quotes', 'Get a random Quote, google fonts JQuery, JSON.', 'https://codepen.io/Emil88PL/full/RgardM', 'https://codepen.io/Emil88PL/pen/RgardM', 'quotes');
