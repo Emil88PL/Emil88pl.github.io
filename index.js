@@ -108,6 +108,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function addDownloadExeButton(projectId) {
+    const project = document.getElementById(projectId);
+
+    if (project) {
+        const buttonsDiv = project.querySelector('.buttons');
+        if (buttonsDiv) {
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'download-exe-btn';
+            downloadBtn.textContent = "Download";
+
+            // Tooltip text on hover
+            downloadBtn.title = "Yes .exe file!";
+
+            // Download handler
+            downloadBtn.onclick = function () {
+                const link = document.createElement("a");
+                link.href = "/download/BuddyTerminal.exe";
+                link.download = "BuddyTerminal.exe";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            buttonsDiv.appendChild(downloadBtn);
+        }
+    }
+}
+
+
 function loadProjects() {
     addProject('BuddyTerminal.png', 'Buddy Terminal', 'Buddy Terminal is a Python-based terminal UI that displays your daily tasks from the DidITakeIT web app in a beautiful, real-time dashboard. Keep track of your tasks without leaving your terminal!', 'https://github.com/Emil88PL/Buddy-Terminal', 'https://github.com/Emil88PL/Buddy-Terminal', 'Buddy-Terminal');
     addProject('Olifant.png', 'Olifant TODO Tracker 🐘', '      A lightweight, read-only development tool that scans your project for TODO comments and generates a comprehensive report with Git blame integration.  Stop losing track of code tasks. Just write TODO: fix this in your code—Olifant finds it, checks who wrote it and when, and compiles everything into a clean TODO_LIST.md report.', 'https://github.com/Emil88PL/Olifant', 'https://github.com/Emil88PL/Olifant', 'Olifant');
@@ -130,4 +159,5 @@ function loadProjects() {
     addProject('codePen.c4d32812.png', 'MyCodePen', 'My codePen with couple projects with vanilla JavaScript, JQuery, Bootstrap.', 'https://codepen.io/Emil88PL', 'https://codepen.io/Emil88PL/pen/bBLVLM', 'codepen');
     addProject('choises.17fc70eb.png', 'All in vanilla JavaScript you can put your own choices and pick random one.', 'Pick one.', 'https://emil88pl.github.io/sample/Choices/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Choices', 'choices');
     addProject('AddItem.c085be10.png', 'Item list', 'Add/Delete item to/from the list + search through the list with Bootstrap and vanilla JavaScript.', 'https://emil88pl.github.io/sample/DOM%20JS%202/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/DOM%20JS%202', 'item-list');
+    addDownloadExeButton('Buddy-Terminal');
 }
