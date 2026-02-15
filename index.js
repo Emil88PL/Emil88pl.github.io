@@ -125,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Use Intersection Observer to show arrow when scrolling to bottom
+    // This is more efficient than scroll event listeners
+    setupBottomObserver();
+
     // Initialize floating stars and quotes
     createStars();
     startStarQuotes();
@@ -373,4 +377,60 @@ function loadProjects() {
     addProject('choises.17fc70eb.png', 'All in vanilla JavaScript you can put your own choices and pick random one.', 'Pick one.', 'https://emil88pl.github.io/sample/Choices/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Choices', 'choices');
     addProject('AddItem.c085be10.png', 'Item list', 'Add/Delete item to/from the list + search through the list with Bootstrap and vanilla JavaScript.', 'https://emil88pl.github.io/sample/DOM%20JS%202/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/DOM%20JS%202', 'item-list');
     addDownloadExeButton('Buddy-Terminal');
+}
+
+// Intersection Observer - detects when user scrolls to bottom
+// Much more efficient than scroll event listeners - runs on compositor thread
+function setupBottomObserver() {
+    // Create a sentinel element at the very bottom to detect
+    const sentinel = document.createElement('div');
+    sentinel.id = 'bottom-sentinel';
+    sentinel.style.height = '1px';
+    sentinel.style.width = '1px';
+    sentinel.style.pointerEvents = 'none'; // Invisible to user
+    
+    // Insert sentinel after the footer
+    const footer = document.getElementById('current-year-footer');
+    if (footer && footer.parentNode) {
+        footer.parentNode.insertBefore(sentinel, footer.nextSibling);
+    } else {
+        // Fallback: append to body if footer not found
+        document.body.appendChild(sentinel);
+    }
+
+    // Create the observer with options
+    const options = {
+        root: null, // Use viewport as root
+        rootMargin: '0px 0px 100px 0px', // Trigger 100px before hitting bottom
+        threshold: 0 // Trigger as soon as 1px is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // User has scrolled to (or near) the bottom
+                const arrowUp = document.getElementById('arrow-up');
+                if (arrowUp) {
+                    arrowUp.style.display = 'block';
+                    
+                    // Add click handler if not already added
+                    if (!arrowUp.hasAttribute('data-listener-added')) {
+                        arrowUp.setAttribute('data-listener-added', 'true');
+                        arrowUp.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            
+                            // Hide after scrolling to top
+                            setTimeout(() => {
+                                arrowUp.style.display = 'none';
+                            }, 500);
+                        });
+                    }
+                }
+            }
+        });
+    }, options);
+
+    // Start observing the sentinel
+    observer.observe(sentinel);
 }
