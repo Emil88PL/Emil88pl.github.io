@@ -100,20 +100,32 @@ document.addEventListener('DOMContentLoaded', () => {
             loadProjects(); // Call function that adds all projects
             projectsLoaded = true;
 
-            // Show the up arrow
-            const arrowUp = document.getElementById('arrow-up');
-            arrowUp.style.display = 'block';
-
-            // Add scroll to top functionality
-            arrowUp.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
             // Disable specific buttons after projects are loaded
             disableViewCodeButton('monkey-type');
             disableViewPageButton('JavaSpringBoot');
             downloadScript('Olifant')
+        }
+
+        // Hide the down arrow
+        arrow.style.display = 'none';
+
+        // Show the up arrow
+        const arrowUp = document.getElementById('arrow-up');
+        arrowUp.style.display = 'block';
+
+        // Add scroll to top functionality (only once)
+        if (!arrowUp.hasAttribute('data-listener-added')) {
+            arrowUp.setAttribute('data-listener-added', 'true');
+            arrowUp.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // After scrolling, show down arrow and hide up arrow
+                setTimeout(() => {
+                    arrow.style.display = 'block';
+                    arrowUp.style.display = 'none';
+                }, 500);
+            });
         }
     });
 
