@@ -106,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadScript('Olifant')
         }
     });
+
+    // Initialize floating stars and quotes
+    createStars();
+    startStarQuotes();
 });
 
 function addDownloadExeButton(projectId) {
@@ -136,6 +140,187 @@ function addDownloadExeButton(projectId) {
     }
 }
 
+
+// --- Floating Stars & Quotes Feature ---
+const STAR_COUNT = 42;
+const DIRECTION_CHANGE_INTERVAL = 13000;
+const STAR_SPEED = 0.3;
+const STAR_QUOTES_MIN_INTERVAL = 4000;
+const STAR_QUOTES_MAX_INTERVAL = 8000;
+
+const POSITIVE_ATTRIBUTES = [
+    "Punctual",
+    "Reliable",
+    "Detail-oriented",
+    "Problem solver",
+    "Team player",
+    "Fast learner",
+    "Creative",
+    "Dedicated",
+    "Communicative",
+    "Adaptable"
+];
+
+const directions = [
+    { x: 0, y: -1 },
+    { x: 0, y: 1 },
+    { x: -1, y: 0 },
+    { x: 1, y: 0 },
+    { x: -0.7, y: -0.7 },
+    { x: 0.7, y: -0.7 },
+    { x: -0.7, y: 0.7 },
+    { x: 0.7, y: 0.7 }
+];
+
+let starQuotesInterval = null;
+let currentQuoteBubble = null;
+let currentQuoteStar = null;
+let quoteAnimationFrame = null;
+
+function createStars() {
+    const container = document.getElementById('stars-container');
+    if (!container) return;
+
+    const stars = [];
+
+    for (let i = 0; i < STAR_COUNT; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        const sizeClass = Math.random() < 0.33 ? 'small' : (Math.random() < 0.5 ? 'medium' : 'large');
+        star.classList.add(sizeClass);
+
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        star.style.left = x + '%';
+        star.style.top = y + '%';
+
+        const starData = {
+            element: star,
+            x: x,
+            y: y,
+            direction: directions[Math.floor(Math.random() * directions.length)],
+            speed: STAR_SPEED + (Math.random() * 0.2)
+        };
+
+        stars.push(starData);
+        container.appendChild(star);
+    }
+
+    function animateStars() {
+        stars.forEach(star => {
+            star.x += star.direction.x * star.speed * 0.1;
+            star.y += star.direction.y * star.speed * 0.1;
+
+            if (star.x < -2) star.x = 102;
+            if (star.x > 102) star.x = -2;
+            if (star.y < -2) star.y = 102;
+            if (star.y > 102) star.y = -2;
+
+            star.element.style.left = star.x + '%';
+            star.element.style.top = star.y + '%';
+        });
+
+        requestAnimationFrame(animateStars);
+    }
+
+    function changeDirections() {
+        stars.forEach(star => {
+            star.direction = directions[Math.floor(Math.random() * directions.length)];
+        });
+    }
+
+    animateStars();
+    setInterval(changeDirections, DIRECTION_CHANGE_INTERVAL);
+}
+
+function getRandomQuote() {
+    return POSITIVE_ATTRIBUTES[Math.floor(Math.random() * POSITIVE_ATTRIBUTES.length)];
+}
+
+function getRandomStar() {
+    const container = document.getElementById('stars-container');
+    if (!container || container.children.length === 0) return null;
+    const stars = container.querySelectorAll('.star');
+    return stars[Math.floor(Math.random() * stars.length)];
+}
+
+function updateQuotePosition() {
+    if (!currentQuoteBubble || !currentQuoteStar) return;
+
+    const rect = currentQuoteStar.getBoundingClientRect();
+    currentQuoteBubble.style.left = (rect.left + rect.width / 2) + 'px';
+    currentQuoteBubble.style.top = (rect.top - 25) + 'px';
+
+    quoteAnimationFrame = requestAnimationFrame(updateQuotePosition);
+}
+
+function showQuoteBubble() {
+    if (currentQuoteBubble) {
+        currentQuoteBubble.remove();
+        currentQuoteBubble = null;
+    }
+
+    if (quoteAnimationFrame) {
+        cancelAnimationFrame(quoteAnimationFrame);
+        quoteAnimationFrame = null;
+    }
+
+    const star = getRandomStar();
+    if (!star) return;
+
+    const quote = getRandomQuote();
+
+    const bubble = document.createElement('div');
+    bubble.className = 'star-quote-bubble';
+    bubble.textContent = quote;
+
+    currentQuoteStar = star;
+
+    const rect = star.getBoundingClientRect();
+    bubble.style.left = (rect.left + rect.width / 2) + 'px';
+    bubble.style.top = (rect.top - 25) + 'px';
+
+    document.body.appendChild(bubble);
+    currentQuoteBubble = bubble;
+
+    quoteAnimationFrame = requestAnimationFrame(updateQuotePosition);
+
+    setTimeout(() => {
+        if (quoteAnimationFrame) {
+            cancelAnimationFrame(quoteAnimationFrame);
+            quoteAnimationFrame = null;
+        }
+        if (bubble && bubble.parentNode) {
+            bubble.classList.add('fade-out');
+            setTimeout(() => {
+                if (bubble && bubble.parentNode) {
+                    bubble.remove();
+                }
+                if (currentQuoteBubble === bubble) {
+                    currentQuoteBubble = null;
+                    currentQuoteStar = null;
+                }
+            }, 500);
+        }
+    }, 4500);
+}
+
+function startStarQuotes() {
+    if (starQuotesInterval) {
+        clearTimeout(starQuotesInterval);
+    }
+
+    function scheduleNext() {
+        const delay = Math.random() * (STAR_QUOTES_MAX_INTERVAL - STAR_QUOTES_MIN_INTERVAL) + STAR_QUOTES_MIN_INTERVAL;
+        starQuotesInterval = setTimeout(() => {
+            showQuoteBubble();
+            scheduleNext();
+        }, delay);
+    }
+
+    scheduleNext();
+}
 
 function loadProjects() {
     addProject('BuddyTerminal.png', 'Buddy Terminal', 'Buddy Terminal is a Python-based terminal UI that displays your daily tasks from the DidITakeIT web app in a beautiful, real-time dashboard. Keep track of your tasks without leaving your terminal!', 'https://github.com/Emil88PL/Buddy-Terminal', 'https://github.com/Emil88PL/Buddy-Terminal', 'Buddy-Terminal');
