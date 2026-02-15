@@ -224,6 +224,38 @@ body::-webkit-scrollbar-thumb:active {
     filter: invert(20%) sepia(80%) saturate(1000%) hue-rotate(240deg) brightness(0.8) contrast(1.2);
 }
 
+.arrow-up {
+    position: fixed;
+    right: 0px;
+    bottom: 8%;
+    z-index: 100;
+    transform: translateY(50%);
+}
+
+.arrow-up img {
+    max-width: 9%;
+    animation: moveUp 1.6s infinite;
+    cursor: pointer;
+    /* filter: invert(20%) sepia(80%) saturate(1000%) hue-rotate(240deg) brightness(0.8) contrast(1.2); */
+    transform: rotate(180deg);
+}
+
+.arrow-up img:hover {
+    filter: invert(20%) sepia(80%) saturate(1000%) hue-rotate(240deg) brightness(1.2) contrast(1.2);
+}
+
+@keyframes moveUp {
+    0% {
+        transform: rotate(180deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(180deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(180deg) translateY(0px);
+    }
+}
+
 @keyframes mymove {
     0% {
         transform: translateY(0px); /* Start at the original position */

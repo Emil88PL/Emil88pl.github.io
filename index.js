@@ -100,6 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
             loadProjects(); // Call function that adds all projects
             projectsLoaded = true;
 
+            // Show the up arrow
+            const arrowUp = document.getElementById('arrow-up');
+            arrowUp.style.display = 'block';
+
+            // Add scroll to top functionality
+            arrowUp.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
             // Disable specific buttons after projects are loaded
             disableViewCodeButton('monkey-type');
             disableViewPageButton('JavaSpringBoot');
