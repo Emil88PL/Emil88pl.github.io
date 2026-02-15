@@ -205,11 +205,8 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .arrow-down {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    /* or shorthand */
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 #arrow-down {
@@ -217,7 +214,7 @@ body::-webkit-scrollbar-thumb:active {
     animation: mymove 1.6s infinite;
     margin-top: 70px;
     transition: filter 0.1s ease;
-    max-width: 39%;
+    max-width: 50px;
 }
 
 #arrow-down:hover {

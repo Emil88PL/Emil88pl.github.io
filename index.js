@@ -106,9 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadScript('Olifant')
         }
 
-        // Hide the down arrow
-        arrow.style.display = 'none';
-
         // Show the up arrow
         const arrowUp = document.getElementById('arrow-up');
         arrowUp.style.display = 'block';
@@ -120,9 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 
-                // After scrolling, show down arrow and hide up arrow
+                // After scrolling, hide up arrow
                 setTimeout(() => {
-                    arrow.style.display = 'block';
                     arrowUp.style.display = 'none';
                 }, 500);
             });
