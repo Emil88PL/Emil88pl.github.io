@@ -158,7 +158,17 @@ const POSITIVE_ATTRIBUTES = [
     "Creative",
     "Dedicated",
     "Communicative",
-    "Adaptable"
+    "Adaptable",
+    "Proactive",
+    "Curious",
+    "Resilient",
+    "Analytical",
+    "Self-motivated",
+    "Organized",
+    "Resourceful",
+    "Collaborative",
+    "Focused",
+    "Versatile"
 ];
 
 const directions = [
