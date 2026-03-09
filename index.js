@@ -355,6 +355,7 @@ function startStarQuotes() {
 }
 
 function loadProjects() {
+    addProject('FormFiler.png', 'Form Filler', 'A desktop application for automating web form submission. Load a CSV file, point it at any web form, map your columns to the detected fields, and watch the browser fill every row in real time.', 'https://github.com/Emil88PL/FormFiller', 'https://github.com/Emil88PL/FormFiller', 'FormFiller');
     addProject('DidI.png', 'Did I Take It?', 'A simple JavaScript-based medication reminder that use localStorage. Supports alerts with telegram push notification.', 'https://did-i-take-it.vercel.app/', 'https://github.com/Emil88PL/DidITakeIT', 'todo');
     addProject('BuddyTerminal.png', 'Buddy Terminal', 'Buddy Terminal is a Python-based terminal UI that displays your daily tasks from the DidITakeIT web app in a beautiful, real-time dashboard. Keep track of your tasks without leaving your terminal!', 'https://github.com/Emil88PL/Buddy-Terminal', 'https://github.com/Emil88PL/Buddy-Terminal', 'Buddy-Terminal');
     addProject('Task Buddy.png', 'Task Buddy', 'Meet AI Super Buddy – the ultimate productivity sidekick for the Did I Take It? app. It reads your tasks, fires up your motivation with inspiring messages, and gets you moving. Runs locally with Ollama + LLaMA 3, so your data stays private and your workflow stays smooth. (version 1.0.4 support TTS)', 'https://chrome-ex-ten.vercel.app/', 'https://chrome-ex-ten.vercel.app/', 'taskBuddy');
