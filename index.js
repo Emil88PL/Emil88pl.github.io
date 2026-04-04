@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startStarQuotes();
 });
 
-function addDownloadExeButton(projectId) {
+function addDownloadExeButton(projectId, filename = "BuddyTerminal.exe") {
     const project = document.getElementById(projectId);
 
     if (project) {
@@ -150,8 +150,8 @@ function addDownloadExeButton(projectId) {
             // Download handler
             downloadBtn.onclick = function () {
                 const link = document.createElement("a");
-                link.href = "/download/BuddyTerminal.exe";
-                link.download = "BuddyTerminal.exe";
+                link.href = "/download/" + filename;
+                link.download = filename;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -378,6 +378,7 @@ function loadProjects() {
     addProject('choises.17fc70eb.png', 'All in vanilla JavaScript you can put your own choices and pick random one.', 'Pick one.', 'https://emil88pl.github.io/sample/Choices/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Choices', 'choices');
     addProject('AddItem.c085be10.png', 'Item list', 'Add/Delete item to/from the list + search through the list with Bootstrap and vanilla JavaScript.', 'https://emil88pl.github.io/sample/DOM%20JS%202/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/DOM%20JS%202', 'item-list');
     addDownloadExeButton('Buddy-Terminal');
+    addDownloadExeButton('taskBuddy', 'Task Buddy Setup 1.0.7.exe');
 }
 
 // Intersection Observer - detects when user scrolls to bottom
