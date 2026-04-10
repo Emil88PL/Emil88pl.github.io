@@ -378,7 +378,7 @@ function loadProjects() {
     addProject('choises.17fc70eb.png', 'All in vanilla JavaScript you can put your own choices and pick random one.', 'Pick one.', 'https://emil88pl.github.io/sample/Choices/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/Choices', 'choices');
     addProject('AddItem.c085be10.png', 'Item list', 'Add/Delete item to/from the list + search through the list with Bootstrap and vanilla JavaScript.', 'https://emil88pl.github.io/sample/DOM%20JS%202/index.html', 'https://github.com/Emil88PL/Emil88pl.github.io/tree/master/sample/DOM%20JS%202', 'item-list');
     addDownloadExeButton('Buddy-Terminal');
-    addDownloadExeButton('taskBuddy', 'Task Buddy Setup 1.0.7.exe');
+    addDownloadExeButton('taskBuddy', 'Task Buddy Setup 1.0.8.exe');
 }
 
 // Intersection Observer - detects when user scrolls to bottom
